@@ -22,7 +22,7 @@ CoffeeCup.Models = {
 if SERVER then
 function CoffeeCup.CheckRequirements()
 	
-	if CoffeeCup.ReplacementTypes then
+	if CoffeeCup.ReplacementTypes and #CoffeeCup.ReplacementTypes > 0 then
 		CoffeeCup.EntityType = table.Random(CoffeeCup.ReplacementTypes)
 		CoffeeCup.PropToReplace = table.Random(ents.FindByClass(CoffeeCup.EntityType))
 		if not CoffeeCup.PropToReplace then
